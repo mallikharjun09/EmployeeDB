@@ -13,71 +13,12 @@
 <context:component-scan base-package="com.mylcat"/>
 
 <mvc:annotation-driven/>
-
+<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
       <property name="prefix" value="/WEB-INF/UI/"/>
       <property name="suffix" value=".jsp"/>
 </bean>
 
-<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-      <property name="driverClassName" value="org.mariadb.jdbc.Driver"/>
-      <property name="url" value="jdbc:mariadb://localhost:3306/mylcat"/>
-      <property name="username" value="root"/>
-      <property name="password" value="root"/>
-</bean> -->
-<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-      <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-      <property name="url" value="jdbc:mysql://localhost:3306/mylcat"/>
-      <property name="username" value="root"/>
-      <property name="password" value="user123"/>
-</bean> -->
 
-<tx:annotation-driven transaction-manager="tm"/>
-
-<bean id="tm" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
-   <property name="sessionFactory" ref="sessionFactory"/>
-</bean>
-
-<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-     <property name="dataSource" ref="dataSource"/>
-     <property name="annotatedClasses">
-        <list>
-           <value>com.mylcat.domain.Employee</value>
-           <value>com.mylcat.domain.Role</value>
-           <value>com.mylcat.domain.Department</value>
-        </list>
-     </property>
-     <property name="hibernateProperties">
-         <props>
-             <prop key="hibernate.dialect">org.hibernate.dialect.MariaDBDialect</prop>
-             <prop key="hibernate.show_sql">true</prop>
-             <prop key="hibernate.hbm2ddl.auto">update</prop>
-         </props>
-     </property>
-</bean>
-
-<bean id="employeeDao" class="com.mylcat.dao.EmployeeDao">
-    <property name="sessionFactory" ref="sessionFactory"/>
-</bean>
-
-<bean id="employeeService" class="com.mylcat.services.EmployeeService">
-     <property name="employeeDao" ref="employeeDao"/>
-</bean>
-
-<bean id="roleDao" class="com.mylcat.dao.RoleDao">
-    <property name="sessionFactory" ref="sessionFactory"/>
-</bean>
-
-<bean id="roleService" class="com.mylcat.services.RoleService">
-     <property name="roleDao" ref="roleDao"/>
-</bean>
-
-<bean id="departmentDao" class="com.mylcat.dao.DepartmentDao">
-    <property name="sessionFactory" ref="sessionFactory"/>
-</bean>
-
-<bean id="departmentService" class="com.mylcat.services.DepartmentService">
-     <property name="departmentDao" ref="departmentDao"/>
-</bean>
 
 </beans>
