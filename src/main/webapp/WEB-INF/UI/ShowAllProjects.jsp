@@ -17,57 +17,76 @@
 			display: none;
 		}
       </style>
+      
    </head>
    <body>
        <%@ include file="menu.jsp" %><br/><br/><br/><br/>
        <div class="container">
-  <h2>List of Employees</h2>
+  <h2>List of Projects</h2>
                                                                                        
-  <div class="table-responsive" ng-app="roleApp" ng-controller="roleController">          
+  <div class="table-responsive" ng-app="proApp" ng-controller="proController">          
        <div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">List of Employees</h3>
+						<h3 class="panel-title">List of Projects</h3>
 						
 					</div>
 					<table class="table table-hover" id="dev-table">
 						<thead>
 							<tr>
-								<th>Role Name</th>
-								<th>Description</th>
+							    <th>Project ID</th>
+								<th>Project Name</th>
+								<th>Project Head</th>
+								<th>Client Name</th>
+								<th>Client Address</th>
+								<th>Start Date</th>
 								
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="x in roles">
-							    
-								<td>{{x.roleName}}</td>
-								<td>{{x.roleDescription}}</td>
+							<tr ng-repeat="x in projects">
+							    <td>{{x.projectId}}</td>
+								<td>{{x.projectName}}</td>
+								<td>{{x.projectHead}}</td>
+								<td>{{x.clientName}}</td>
+								<td>{{x.clientAddress}}</td>
+								<td>{{x.startDate}}</td>
 								<td>
 							
-								<a class="btn btn-default" href="updateRole?roleId={{x.roleId}}">
+								<a class="btn btn-default" href="updateProject?projectId={{x.projectId}}">
 			                        <span class="glyphicon glyphicon-pencil"></span> 
 			                    </a>
-							    <a class="btn btn-default" href="deleteRole?roleId={{x.roleId}}">
+			                    <a class="btn btn-default" href="deleteProject?projectId={{x.projectId}}">
 							        <span class="glyphicon glyphicon-remove"></span> 
 							    </a>
+							    
 						   </td>
 							</tr>					</tbody>
 					</table>
 				</div>
 				<script>
-			var app = angular.module('roleApp', []);
-			var link = "showAllRole";
-			app.controller('roleController', function($scope, $http) {$http.get(link).then(
+			var app = angular.module('proApp', []);
+			var link = "showAllPro";
+			app.controller('proController', function($scope, $http) {$http.get(link).then(
 						function(response) {
-							$scope.roles = response.data;
+							$scope.projects = response.data;
+							
 						});
 			
 			});
 			
 			
 		</script>
-  </div>
+
+</div>
+
   
 </div>
-   </body>
+
+
+
+
+
+<body>
+
+</body>
 </html>

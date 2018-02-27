@@ -47,7 +47,7 @@ public class RoleService {
      
      @RequestMapping(value="editRole")
      public String editRole(@RequestParam int roleId,@RequestParam String roleName,@RequestParam String roleDescription) {
-    	 Role role=new Role();
+    	 Role role=roleDao.findRoleById(roleId);
     	 role.setRoleName(roleName);
     	 role.setRoleDescription(roleDescription);
     	 role.setRoleId(roleId);

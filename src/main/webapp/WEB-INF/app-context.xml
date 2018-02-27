@@ -34,6 +34,7 @@
              <value>com.mylcat.Domain.Role</value>
              <value>com.mylcat.Domain.TaskAssign</value>
              <value>com.mylcat.Domain.Module</value>
+             <value>com.mylcat.Domain.Project</value>
           </list>
       </property>
       <property name="hibernateProperties">
@@ -58,6 +59,6 @@
 <bean id="roleDao" class="com.mylcat.Dao.RoleDao"/>
 <bean id="taskAssignDao" class="com.mylcat.Dao.TaskAssignDao"/>
 <bean id="moduleDao" class="com.mylcat.Dao.ModuleDao"/>
-
+<bean id="projectDao" class="com.mylcat.Dao.ProjectDao"/>
 
 </beans>

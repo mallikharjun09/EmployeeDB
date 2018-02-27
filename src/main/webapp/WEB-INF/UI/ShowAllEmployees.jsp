@@ -54,7 +54,7 @@
 								<a class="btn btn-default" href="updateEmployee?empId={{x.empId}}">
 			                        <span class="glyphicon glyphicon-pencil"></span> 
 			                    </a>
-							    <a class="btn btn-default" href="removeEmployee?empId={{x.empId}}">
+							    <a class="btn btn-default" href="deleteEmployee?empId={{x.empId}}">
 							        <span class="glyphicon glyphicon-remove"></span> 
 							    </a>
 						   </td>

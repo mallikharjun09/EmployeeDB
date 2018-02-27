@@ -62,7 +62,7 @@ public class EmployeeService {
      
      @RequestMapping(value="editEmployee")
      public String editEmployee(@RequestParam int empId,@RequestParam String empName,@RequestParam String empMail,@RequestParam String empPassword,@RequestParam Long empPhone,@RequestParam String empAddress,@RequestParam int roleId) {
-    	 Employee emp=new Employee();
+    	 Employee emp=empDao.findEmployeeById(empId);
     	 emp.setEmpId(empId);
     	 emp.setEmpAddress(empAddress);
     	 emp.setEmpMail(empMail);
