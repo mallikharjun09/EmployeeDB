@@ -4,6 +4,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
@@ -53,19 +54,6 @@ button:hover {
 
 
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
-    padding-top: 50px;
-}
 
 /* Modal Content/Box */
 .modal-content {
@@ -94,7 +82,8 @@ hr {
 </head>
 <body>
     <%@ include file="menu.jsp" %>
-         <form class="modal-content" action="/action_page.php">
+       
+         <form class="modal-content" action="saveEmployee" method="post">
     
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
@@ -107,8 +96,23 @@ hr {
 	  <input type="text" placeholder="Enter Phone Number" name="empPhone" required>
 	  <label for="email"><b>Address</b></label>
       <input type="text" placeholder="Enter Address" name="empAddress" required>
+      <div ng-app="newEmpApp" ng-controller="newEmpCtrl">
       <label for="email"><b>Employee Role</b></label>
-      <input type="text" placeholder="Role Name" name="roleId" required>
+      <input type="text" placeholder="Role Name" name="roleId" list="roleList" required>
+      <datalist id="roleList">
+          <option ng-repeat="x in roles" value="{{x.roleId}}">{{x.roleName}}</option>
+      </datalist>
+      </div>
+   		<script>
+			var app = angular.module('newEmpApp', []);
+			var link = "showAllRole";
+			app.controller('newEmpCtrl', function($scope, $http) {$http.get(link).then(
+						function(response) {
+							$scope.roles = response.data;
+						});
+			
+			});
+		</script>
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="empPassword" required>
 	  

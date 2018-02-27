@@ -71,13 +71,13 @@ span.psw {
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Employee Details <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="addEmployee">New Employee</a></li>
-          <li><a href="#">Existed Employee List</a></li>
+          <li><a href="getAll">Existed Employee List</a></li>
           <li><a href="#">Attendence Report</a></li>
         </ul>
       </li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Tasks <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Assign New Task</a></li>
+          <li><a href="assignTask">Assign Task to Employee</a></li>
           <li><a href="#">Completed Task List</a></li>
           <li><a href="#">Pending Task List</a></li>
           <li><a href="#">All Tasks</a></li>
@@ -85,8 +85,8 @@ span.psw {
       </li>
 	  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Roles <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Add New Role</a></li>
-          <li><a href="#">Show All Roles</a></li>
+          <li><a href="addRole">Add New Role</a></li>
+          <li><a href="getAllRole">Show All Roles</a></li>
         </ul>
       </li>
 	  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
@@ -145,5 +145,6 @@ span.psw {
     </div>
   </div>
 </div>
+
 </body>
 </html>

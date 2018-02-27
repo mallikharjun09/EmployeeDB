@@ -17,4 +17,38 @@ public class MylcatService {
     public String addEmployee() {
     	return "NewEmployee";
     }
+    
+    @RequestMapping("getAll")
+    public String showAllEmployees() {
+    	return "ShowAllEmployees";
+    }
+    
+    @RequestMapping("updateEmployee")
+    public String updateEmployee() {
+    	return "UpdateEmployee";
+    }
+    @RequestMapping("addRole")
+    public String addRole() {
+    	return "NewRole";
+    }
+    
+    @RequestMapping("getAllRole")
+    public String showAllRoles() {
+    	return "ShowAllRole";
+    }
+    
+    @RequestMapping("updateRole")
+    public String updateRole() {
+    	return "UpdateRole";
+    }
+    
+    @RequestMapping("assignTask")
+    public String assignTask() {
+    	return "AssignTask";
+    }
+    
+    @RequestMapping("getAllAssignedTasks")
+    public String showAllAssignedTasks() {
+    	return "ShowAllAssignedTasks";
+    }
 }
