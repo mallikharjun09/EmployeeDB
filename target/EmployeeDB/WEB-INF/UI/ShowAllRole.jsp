@@ -47,7 +47,7 @@
 								<a class="btn btn-default" href="updateRole?roleId={{x.roleId}}">
 			                        <span class="glyphicon glyphicon-pencil"></span> 
 			                    </a>
-							    <a class="btn btn-default" href="removeRole?roleId={{x.roleId}}">
+							    <a class="btn btn-default" href="deleteRole?roleId={{x.roleId}}">
 							        <span class="glyphicon glyphicon-remove"></span> 
 							    </a>
 						   </td>

@@ -22,7 +22,7 @@ public class ProjectDao extends MylcatDao
 
     public List showAllProjects()
     {
-        return mySession().createCriteria(com/mylcat/Domain/Project).list();
+        return mySession().createCriteria(Project.class).list();
     }
 
     public void deleteProject(Project pro)
@@ -32,6 +32,6 @@ public class ProjectDao extends MylcatDao
 
     public Project findProjectById(int id)
     {
-        return (Project)mySession().get(com/mylcat/Domain/Project, Integer.valueOf(id));
+        return (Project)mySession().get(Project.class, id);
     }
 }

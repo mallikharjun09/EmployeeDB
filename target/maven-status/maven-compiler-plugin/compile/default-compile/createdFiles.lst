@@ -1,3 +1,4 @@
+com\mylcat\services\ProjectService.class
 com\mylcat\Dao\MylcatDao.class
 com\mylcat\services\RoleService.class
 com\mylcat\Domain\Module.class
@@ -6,9 +7,11 @@ com\mylcat\Domain\Role.class
 com\mylcat\Dao\EmployeeDao.class
 com\mylcat\services\TaskAssignService.class
 com\mylcat\services\EmployeeService.class
+com\mylcat\Dao\ProjectDao.class
 com\mylcat\Dao\TaskAssignDao.class
 com\mylcat\Dao\RoleDao.class
 com\mylcat\Domain\TaskAssign.class
 com\mylcat\services\ModuleService.class
+com\mylcat\Domain\Project.class
 com\mylcat\Domain\Employee.class
 com\mylcat\services\MylcatService.class

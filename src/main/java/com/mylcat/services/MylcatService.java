@@ -32,15 +32,31 @@ public class MylcatService {
     	return "NewRole";
     }
     
+    @RequestMapping("addProject")
+    public String addProject() {
+    	return "NewProject";
+    }
+    
     @RequestMapping("getAllRole")
     public String showAllRoles() {
     	return "ShowAllRole";
+    }
+    
+    @RequestMapping("getAllProjects")
+    public String showAllProjects() {
+    	return "ShowAllProjects";
     }
     
     @RequestMapping("updateRole")
     public String updateRole() {
     	return "UpdateRole";
     }
+    
+    @RequestMapping("updateProject")
+    public String updateProject() {
+    	return "UpdateProject";
+    }
+    
     
     @RequestMapping("assignTask")
     public String assignTask() {
