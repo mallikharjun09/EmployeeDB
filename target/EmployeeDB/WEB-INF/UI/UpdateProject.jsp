@@ -94,7 +94,8 @@ hr {
 	  <input type="text" placeholder="Enter Client Name" name="clientName" value="{{x.clientName}}" required>
 	  <label for="email"><b>Client Address</b></label>
       <input type="text" placeholder="Enter Address" name="clientAddress" value="{{x.clientAddress}}" required>
-      
+       <label for="email"><b>Start Date</b></label>
+      <input type="date" placeholder="Enter Start Date" name="startDate" value="{{x.startDate}}" required>
      
     
 

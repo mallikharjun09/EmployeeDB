@@ -2,36 +2,37 @@ package com.mylcat.Dao;
 
 import com.mylcat.Domain.Project;
 import java.util.List;
+
+import javax.transaction.Transactional;
+
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 
-// Referenced classes of package com.mylcat.Dao:
-//            MylcatDao
+
 
 public class ProjectDao extends MylcatDao
 {
-
-    public ProjectDao()
-    {
-    }
-
+	@Transactional
     public void saveProject(Project pro)
     {
         mySession().saveOrUpdate(pro);
     }
 
+	@Transactional
     public List showAllProjects()
     {
         return mySession().createCriteria(Project.class).list();
     }
 
-    public void deleteProject(Project pro)
+	@Transactional
+	public void deleteProject(Project pro)
     {
         mySession().delete(pro);
     }
 
-    public Project findProjectById(int id)
+	@Transactional
+	public Project findProjectById(int projectid)
     {
-        return (Project)mySession().get(Project.class, id);
+        return (Project)mySession().get(Project.class, projectid);
     }
 }

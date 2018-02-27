@@ -91,10 +91,10 @@ span.psw {
       </li>
 	  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Completed Projects</a></li>
+          <li><a href="addProject">New Project</a></li>
           <li><a href="#">Future Projects</a></li>
           <li><a href="#">Status of Project</a></li>
-          <li><a href="#">All Projects</a></li>
+          <li><a href="getAllProjects">All Projects</a></li>
         </ul>
       </li>
 	  <li><a href="#" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in"></span>Sign In</a></li>        
