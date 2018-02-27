@@ -51,4 +51,16 @@ public class MylcatService {
     public String showAllAssignedTasks() {
     	return "ShowAllAssignedTasks";
     }
+    @RequestMapping("addModule")
+    public String addModule() {
+    	return "NewModule";
+    }
+    @RequestMapping("getAllModule")
+    public String showAllModule() {
+    	return "ShowAllModule";
+    }
+    @RequestMapping("updateModule")
+    public String updateModule() {
+    	return "UpdateModule";
+    }
 }

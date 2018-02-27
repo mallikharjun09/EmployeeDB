@@ -23,7 +23,7 @@
      <property name="driverClassName" value="org.mariadb.jdbc.Driver"/>
      <property name="url" value="jdbc:mariadb://localhost:3306/empmgmt"/>
      <property name="username" value="root"/>
-     <property name="password" value="user123"/>
+     <property name="password" value="root"/>
 </bean>
 
 <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
@@ -33,6 +33,7 @@
              <value>com.mylcat.Domain.Employee</value>
              <value>com.mylcat.Domain.Role</value>
              <value>com.mylcat.Domain.TaskAssign</value>
+             <value>com.mylcat.Domain.Module</value>
           </list>
       </property>
       <property name="hibernateProperties">
@@ -56,6 +57,7 @@
 
 <bean id="roleDao" class="com.mylcat.Dao.RoleDao"/>
 <bean id="taskAssignDao" class="com.mylcat.Dao.TaskAssignDao"/>
+<bean id="moduleDao" class="com.mylcat.Dao.ModuleDao"/>
 
 
 </beans>
